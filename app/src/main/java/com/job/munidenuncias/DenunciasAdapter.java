@@ -31,8 +31,6 @@ public class DenunciasAdapter extends RecyclerView.Adapter<DenunciasAdapter.View
 
     private Activity activity;
 
-
-
     public DenunciasAdapter(Activity activity){
         this.denuncias = new ArrayList<>();
         this.activity = activity;
@@ -189,7 +187,7 @@ public class DenunciasAdapter extends RecyclerView.Adapter<DenunciasAdapter.View
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(activity, DetailActivity.class);
-                intent.putExtra("ID", denuncia.getId());
+                intent.putExtra("ID", ""+denuncia.getId());
                 activity.startActivity(intent);
             }
         });

@@ -54,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                         Usuario usuario = response.body();
                         //Log.d(TAG, "responseMessage: " + responseMessage);
                         String user = usuario.getUsername();
-                        int id = usuario.getId();
+                        String id = String.valueOf(usuario.getId());
                        // startActivity(new Intent(LoginActivity.this, ListadoActivity.class));
                         Intent intent2 = new Intent(LoginActivity.this, ListadoActivity.class);
                         intent2.putExtra("id", id);

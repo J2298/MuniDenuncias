@@ -29,6 +29,8 @@ public class ListadoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado);
 
+
+        //Intent del login
         Intent intent = getIntent();
         id = intent.getStringExtra("id");
 
@@ -86,6 +88,8 @@ public class ListadoActivity extends AppCompatActivity {
     }
 
     public void showRegister(View view){
+
+        //Intent para el registro
         Intent intent = new Intent(this, RegisterActivity.class);
         intent.putExtra("id", id);
 

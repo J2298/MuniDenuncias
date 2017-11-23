@@ -23,8 +23,8 @@ public interface ApiService {
 
     @FormUrlEncoded
     @POST("/api/v1/denuncias")
-    Call<ResponseMessage> createDenuncia(@Field("nombre") String nombre,
-                                         @Field("usuario_id") int usuario_id,
+    Call<ResponseMessage> createDenuncia(@Field("titulo") String titulo,
+                                         @Field("usuarios_id") int usuarios_id,
                                          @Field("lat") String lat,
                                          @Field("lon") String lon,
                                          @Field("detalles") String detalles);

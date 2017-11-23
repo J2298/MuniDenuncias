@@ -48,9 +48,9 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        // Intent del listado
         Intent intent = getIntent();
         id = intent.getStringExtra("id");
-
 
         imagePreview = (ImageView) findViewById(R.id.imagen_preview);
         nombreInput = (EditText) findViewById(R.id.nombre_input);
@@ -147,7 +147,8 @@ public class RegisterActivity extends AppCompatActivity {
         if (mediaFileUri == null) {
             // Si no se incluye imagen hacemos un envío POST simple
 
-            call = service.createDenuncia(titulo,usuarios_id, latitud, longitud, detalles);
+            call = service.createDenuncia(titulo , usuarios_id, latitud, longitud, detalles);
+
         } else {
             // Si se incluye hacemos envió en multiparts
 
